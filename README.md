@@ -28,4 +28,4 @@
 ---
 
 You can adjust the details if needed, depending on the exact setup of your project.
-" it will be preasure if someone else add new  pet etc "
+" it will be pleasure if someone else add new  pet etc "
