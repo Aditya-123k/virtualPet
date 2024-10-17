@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('img/background.png') no-repeat center center;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif; /* Default font */
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.logo {
+    max-width: 350px; /* Adjust size as needed */
+    height: auto;
+}
+
+.profile-btn {
+    position: absolute;
+    top: 30%;
+    right: 150px; /* Positioned to the left of the Sign Up button */
+    padding: 10px 20px;
+    background-color: #e74c3c; /* Red background */
+    color: white;
+    font-weight: bold;
+    border-radius: 50%; /* Makes the button circular */
+    border: none;
+    cursor: pointer;
+    transition: 0.3s; /* Smooth hover animation */
+}
+
+.profile-btn:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+.signup-btn {
+    position: absolute;
+    top: 30%;
+    right: 20px; /* Position for Sign Up button */
+    padding: 10px 20px;
+    background-color: #3498db; /* Blue background */
+    color: white;
+    font-weight: bold;
+    border-radius: 5px; 
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: scale(1.1); /* Slight scale up */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Adjust height to center the content */
+    text-align: center;
+}
+
+.title {
+    font-size: 36px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.description {
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}

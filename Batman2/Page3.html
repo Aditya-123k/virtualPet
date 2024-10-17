@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styla.css">
+    <title>Select Game Character</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="container">
+        <div class="card">
+            <div class="card-image">
+                <img src="./images/img1.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <span class="power">Brilliant Power</span>
+                <h2>Jinx </h2>
+                <p>Meet Glitch! He won't come running when you call, but might surprise you with a hilarious meme perfectly suited to your mood</p>
+            </div>
+
+            <div class="card-footer">
+                <div class="info">
+                    <div class="value">51784</div>
+                    <div class="type">used</div>
+                </div>
+                <div class="info">
+                    <div class="value">329</div>
+                    <div class="type">comments</div>
+                </div>
+                <div class="info">
+                    <div class="value">4.5</div>
+                    <div class="type">rating</div>
+                </div>
+            </div>
+
+            <div class="selector">
+                <button onclick="runMain()">Go with this!</button>  <!-- Add onclick event -->
+            </div>
+
+        </div>
+
+        <script src="script.js"></script> 
+
+        
+        <div class="card">
+            <div class="card-image">
+                <img src="./images/img2.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <span class="power">Street Power</span>
+                <h2>The fighter</h2>
+                <p>Comming soon!</p>
+            </div>
+
+            <div class="card-footer">
+                <div class="info">
+                    <div class="value">51784</div>
+                    <div class="type">used</div>
+                </div>
+                <div class="info">
+                    <div class="value">329</div>
+                    <div class="type">comments</div>
+                </div>
+                <div class="info">
+                    <div class="value">4.5</div>
+                    <div class="type">rating</div>
+                </div>
+            </div>
+            <div class="selector">
+                <button>go with this!</button>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="./images/img3.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <span class="power">Knight Power</span>
+                <h2>Pbama</h2>
+                <p>Comming Soon!</p>
+            </div>
+
+            <div class="card-footer">
+                <div class="info">
+                    <div class="value">51784</div>
+                    <div class="type">used</div>
+                </div>
+                <div class="info">
+                    <div class="value">329</div>
+                    <div class="type">comments</div>
+                </div>
+                <div class="info">
+                    <div class="value">4.5</div>
+                    <div class="type">rating</div>
+                </div>
+            </div>
+            <div class="selector">
+                <button>go with this!</button>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="./images/img4.png" alt="Character">
+            </div>
+
+            <div class="card-body">
+                <span class="power">Brilliant Power</span>
+                <h2>Pbama W</h2>
+                <p>Comming soon!</p>
+            </div>
+
+            <div class="card-footer">
+                <div class="info">
+                    <div class="value">51784</div>
+                    <div class="type">used</div>
+                </div>
+                <div class="info">
+                    <div class="value">329</div>
+                    <div class="type">comments</div>
+                </div>
+                <div class="info">
+                    <div class="value">4.5</div>
+                    <div class="type">rating</div>
+                </div>
+            </div>
+            <div class="selector">
+                <button>go with this!</button>
+            </div>
+
+        </div>
+    </div>
+   
+
+    <!-- Fetch and insert the navigation bar -->
+    <script>
+        // Fetch the content of the navbar.html file and insert it into the div with ID "navbar"
+        fetch('index.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>

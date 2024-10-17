@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Daily UI #006 User Profile</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'><link rel="stylesheet" href="./profile.css">
+
+</head>
+<body>
+  <div id="navbar"></div>
+<!-- partial:index.partial.html -->
+<div class="profile">
+  <div class="photo"><img src="imga/profile-512.jpg"/></div>
+  <div class="content">
+    <div class="text">
+      <h3>Master!</h3>
+      <h6>Welcome Back to  BitBuddy!</h6>
+    </div>
+    <div class="btn"><span></span></div>
+  </div>
+  <div class="box"><i class="fa fa-codepen"></i><i class="fa fa-facebook"></i><i class="fa fa-github"></i><i class="fa fa-tumblr"></i>  <a href="https://twitter.com/i/flow/signup" target="_blank" rel="noopener noreferrer" aria-label="Sign up on Twitter">
+    <i class="fa fa-twitter"></i>
+  </a></div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./profile.js"></script>
+<!-- Fetch and insert the navigation bar -->
+<script>
+  // Fetch the content of the navbar.html file and insert it into the div with ID "navbar"
+  fetch('index.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+      });
+</script>
+</body>
+</html>

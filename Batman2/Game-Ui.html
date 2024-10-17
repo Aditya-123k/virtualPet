@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cool Webpage</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Include Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="header">
+        <img src="img/log4.png" alt="Logo" class="logo">
+        <!-- Add the Profile and Sign Up Buttons -->
+        <a href="profile.html">
+            <button class="profile-btn">Profile</button>
+          </a>
+           <!-- Circular button for Profile -->
+        <button class="signup-btn" id="signup-btn">Sign Up</button>
+    </div>
+    <div class="content">
+        <h1 class="title">Welcome to BitBuddy</h1>
+        <p class="description">BitBuddy is an interactive desktop pet designed for gamers,
+             combining advanced technology with playful engagement.</p>
+        <p class="description">Feel free to explore and have fun!</p>
+    </div>
+
+    <script>
+        // Redirection to the login page when the button is clicked
+        document.getElementById("signup-btn").addEventListener("click", function() {
+            window.location.href = 'http://localhost:81/melvin/login.html'; // Path to login page
+        });
+    </script>
+     <!-- Fetch and insert the navigation bar -->
+     <script>
+        fetch('index.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+}
+
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+main {
+  margin-left: 5rem; /* Allows space for the fixed navbar */
+  padding: 1rem;
+}
+
+.navbar {
+  position: fixed;
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  z-index: 1000; /* Ensure it appears above other elements */
+  background-color: var(--bg-primary);
+  transition: width var(--transition-speed) ease;
+  overflow: auto;
+  width: 5rem; /* Default width */
+  height: 100vh; /* Full height */
+}
+
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%; /* Ensure it takes full height */
+}
+
+.nav-item {
+  width: 100%; /* Full width of the navbar */
+}
+
+.nav-item:last-child {
+  margin-top: auto; /* Pushes last item to the bottom */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem; /* Consistent height for all nav-links */
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1); /* Hover effect */
+  background: var(--bg-secondary); /* Background on hover */
+  color: var(--text-secondary); /* Text color on hover */
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link svg {
+  width: 2rem; /* Consistent width for icons */
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.fa-primary {
+  color: #ff7eee;
+}
+
+.fa-secondary {
+  color: #df49a6;
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed); /* Smooth transition */
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch; /* Letter spacing for styling */
+  width: 100%; /* Full width */
+}
+
+.logo svg {
+  transform: rotate(0deg); /* Initial rotation */
+  transition: var(--transition-speed);
+}
+
+.logo-text {
+  display: inline;
+  position: absolute;
+  left: -999px; /* Initial hidden position */
+  transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-180deg); /* Rotate on hover */
+}
+
+.navbar:hover .logo-text {
+  left: 0px; /* Move to visible position on hover */
+}
+
+.navbar:hover .link-text {
+  display: inline; /* Display link text on hover */
+}
+
+/* Styles for small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0; /* Position at the bottom */
+    width: 100vw; /* Full width */
+    height: 5rem; /* Fixed height */
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+
+  .logo {
+    display: none; /* Hide logo on mobile */
+  }
+
+  .navbar-nav {
+    flex-direction: row; /* Horizontal layout on mobile */
+  }
+
+  .nav-link {
+    justify-content: center; /* Center alignment */
+  }
+
+  main {
+    margin: 0; /* No margin needed */
+  }
+}
+
+/* Styles for large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0; /* Position at the top */
+    width: 5rem; /* Narrow width by default */
+    height: 100vh; /* Full height */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  .navbar:hover {
+    width: 16rem; /* Expand width on hover */
+  }
+
+  .navbar:hover .link-text {
+    display: inline; /* Show link text on hover */
+  }
+
+  .navbar:hover .logo svg {
+    margin-left: 11rem; /* Move left on hover */
+  }
+
+  .navbar:hover .logo-text {
+    left: 0px; /* Align left on hover */
+  }
+}
+
+.dark {
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+}
+
+.light {
+  --text-primary: #1f1f1f;
+  --text-secondary: #000000;
+  --bg-primary: #ffffff;
+  --bg-secondary: #e4e4e4;
+}
+
+.solar {
+  --text-primary: #576e75;
+  --text-secondary: #35535c;
+  --bg-primary: #fdf6e3;
+  --bg-secondary: #f5e5b8;
+}
+
+.theme-icon {
+  display: none; /* Initially hidden */
+}
+
+.dark #darkIcon {
+  display: block; /* Show dark mode icon */
+}
+
+.light #lightIcon {
+  display: block; /* Show light mode icon */
+}
+
+.solar #solarIcon {
+  display: block; /* Show solar mode icon */
+}
